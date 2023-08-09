@@ -1,3 +1,10 @@
 pandas boxplotでタイトルを非表示にする方法
 ax = df1.boxplot(column=['data1'], by=['category'], grid=False, figsize=(6,5), title = 'my_title')
 ax.get_figure().suptitle('My Title')
+
+texの引用Styleの設定。
+% (Okumura, 2009) などを (Okumura 2009) とする
+% 日本語文章で全角丸括弧の表示にし、かつ \inhibitglue で役物同士の字間を適切にする。
+% https://oku.edu.mie-u.ac.jp/tex/mod/forum/discuss.php?d=2349
+%\setcitestyle{aysep={},notesep={},open={\inhibitglue（},close={）\inhibitglue}}
+\setcitestyle{numbers,square,citesep={,}}
